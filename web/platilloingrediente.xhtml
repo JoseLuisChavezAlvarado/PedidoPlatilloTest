@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Ingrediente del Platillo</title>
+    </h:head>
+    <h:body>
+<ui:composition template="./WEB-INF/plantillaboot.xhtml">
+            <ui:define name="contenido">
+                <h:form id="formulario">
+
+                    <h:panelGrid columns="2" styleClass="col-md-10 col-sm-10 col-xs-12 input-group">
+                        <h:outputText value="Id" />
+                        <b:inputText value=" " required="true" required-message="Aregregar Id"/>
+                        <h:outputText value="Id Platillo" />
+                        <b:inputText value=" " required="true" required-message="Agrega id del Platillo" />
+                        <h:outputText value="Id Ingrediente" />
+                        <b:inputText value=" " required="true" required-message="Agrega id del Ingrediente" />
+                        <h:outputText value="Gramos" />
+                        <b:inputText value=" " required="true" required-message="Agrega gramos" />
+
+                    </h:panelGrid>
+                    <h:panelGrid columns="3" styleClass="col-md-10 col-sm-12 col-xs-12" style="text-align: center">
+                         <b:commandButton value="Insertar" action=" " look="success" style-class="btn-lg"/>
+                         <b:commandButton value="Actualizar" action=" " look="success" style-class="btn-lg"/>
+                         <b:commandButton value="Borrar" action=" " look="success" style-class="btn-lg"/>
+                     <b:messages />
+                    </h:panelGrid>
+                </h:form>
+                
+                <b:dataTable value="" var="platilloingrediente" id="platilloingredientePool" styleClass="table table-striped table-bordered">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id"/>
+                        </f:facet>
+                        <h:outputText value=" "/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id Platillo"/>
+                        </f:facet>
+                        <h:outputText value=" "/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id Ingrediente"/>
+                        </f:facet>
+                        <h:outputText value=" "/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Gramos"/>
+                        </f:facet>
+                        <h:outputText value=" "/>
+                    </h:column>
+                </b:dataTable>
+                
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
